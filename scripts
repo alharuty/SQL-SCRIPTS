@@ -4,7 +4,7 @@ USE SQL_Project;
 /* LA NOTA MEDIA QUE OTORGA CADA PROFESOR */
 SELECT 
 	p.professors_name,
-    AVG(g.grade_course) AS average_grade
+	AVG(g.grade_course) AS average_grade
 FROM Professors p
 JOIN Courses c
 	ON p.professors_id = c.course_id
