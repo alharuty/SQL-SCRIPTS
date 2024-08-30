@@ -1,0 +1,58 @@
+/* LA NOTA MEDIA QUE OTORGA CADA PROFESOR */
+SELECT 
+	p.professors_name,
+    AVG(g.grade_course) AS average_grade
+FROM Professors p
+JOIN Courses c
+	ON p.professors_id = c.course_id
+JOIN Grades g
+	ON c.course_id = g.grade_course_id
+GROUP BY p.professors_name;
+
+    
+/* LAS MEJORES NOTAS DE CADA ESTUDIANTE */    
+SELECT
+	student_name,
+	MAX(g.grade_course) AS best_grade
+FROM Students s
+JOIN grades g
+  ON s.student_id = g.grade_course_student_id
+GROUP BY s.student_id;
+
+
+/* ORDENAR A LOS ESTUDIANTES POR LOS CURSOS QUE ESTÁN ISNCRITOS, no se si en ese orden o al revés*/
+SELECT course_name, student_name
+FROM Students s
+JOIN Grades g
+  ON s.student_id = g.grade_course_student_id
+JOIN Courses c
+  ON g.grade_course_id = c.course_id
+GROUP BY c.course_name, s.student_name;
+
+
+/* INFORME RESUMIDO */
+SELECT
+	course_name AS "Course",
+    AVG(g.grade_course) AS "Average grade"
+FROM Courses c
+JOIN Grades g
+	ON c.course_id = g.grade_course_id
+GROUP BY c.course_name
+ORDER BY AVG(g.grade_course) ASC;
+
+
+/* Encontrar qué estudiante y profesor tienen más cursos en común */
+SELECT 
+    s.student_name, 
+    p.professors_name,
+    COUNT(*) AS "common"
+FROM Students s
+JOIN Grades g
+  ON s.student_id = g.grade_course_student_id
+JOIN Courses c
+  ON g.grade_course_id = c.course_id
+JOIN Professors p
+  ON c.course_id = p.professors_id
+GROUP BY s.student_name, p.professors_name
+ORDER BY COUNT(*) DESC
+LIMIT 1;
