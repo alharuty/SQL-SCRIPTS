@@ -1,3 +1,6 @@
+USE SQL_Project;
+
+
 /* LA NOTA MEDIA QUE OTORGA CADA PROFESOR */
 SELECT 
 	p.professors_name,
