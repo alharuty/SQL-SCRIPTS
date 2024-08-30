@@ -1,0 +1,70 @@
+/* INSERTAR ESTUDIANTES*/
+
+INSERT INTO Students(student_name, student_surname)
+VALUES ("Maria", "Gomez");
+INSERT INTO Students(student_name, student_surname)
+VALUES ("Juan", "Dominguez");
+INSERT INTO Students(student_name, student_surname)
+VALUES ("Maria", "Gonzalez");
+
+
+/* INSERTAR ASIGNATURAS*/
+
+INSERT INTO Courses(course_name)
+VALUES ("Matematicas");
+INSERT INTO Courses(course_name)
+VALUES ("Ingles");
+INSERT INTO Courses(course_name)
+VALUES ("RRHH");
+INSERT INTO Courses(course_name)
+VALUES ("Fisica");
+INSERT INTO Courses(course_name)
+VALUES ("Biologia");
+INSERT INTO Courses(course_name)
+VALUES ("Quimica");
+
+
+/* INSERTAR PROFESORES Y SUS ASIGNATURAS*/
+
+INSERT INTO Professors(professors_name, professors_course_name)
+VALUES ("Pedro", "Matematicas");
+INSERT INTO Professors(professors_name, professors_course_name)
+VALUES ("Pablo", "Ingles");
+INSERT INTO Professors(professors_name, professors_course_name)
+VALUES ("Karmen", "RRHH");
+INSERT INTO Professors(professors_name, professors_course_name)
+VALUES ("Pablo", "Fisica");
+INSERT INTO Professors(professors_name, professors_course_name)
+VALUES ("Karmen", "Biologia");
+INSERT INTO Professors(professors_name, professors_course_name)
+VALUES ("Pablo", "Quimica");
+
+
+/* INSERTAR CALIFICACIÓN DE CADA ESTUDIANTE EN LOS CURSOS QUE HACE*/
+
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("8", 1, 1);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("7", 2, 1);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("3", 3, 1);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("3", 4, 1);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("6", 5, 1);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("5", 6, 1);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("6", 1, 2);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("8", 2, 2);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("4", 5, 2);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("7", 1, 3);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("5", 2, 3);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("6", 3, 3);
+INSERT INTO Grades(grade_course, grade_course_id, grade_course_student_id)
+VALUES ("6", 5, 3);
